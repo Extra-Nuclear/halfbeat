@@ -25,41 +25,41 @@ body {
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 60px; /* Space between the containers */
-    width: 700px;
+    width: 500px;
 }
 
 /* Container for the clock and date */
 .container {
     text-align: center;
-    padding: 40px 50px;  /* Increased padding for a bigger container */
+    padding: 20px 30px;  /* Increased padding for a bigger container */
     border: 3px solid #ddd;  /* Thicker border for emphasis */
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px; /* Space between the containers */
-    width: 700px; /* Set a fixed width for the containers */
+    width: 500px; /* Set a fixed width for the containers */
 }
 
 /* Stopwatch Container Styling */
 .stopwatch-container {
     text-align: center;
-    padding: 40px 50px;  /* Same padding as the top container */
+    padding: 20px 30px;  /* Same padding as the top container */
     border: 3px solid #ddd;  /* Same border style */
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    width: 700px; /* Same fixed width as the top container */
+    width: 500px; /* Same fixed width as the top container */
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 /* Heading Style */
 h2, h3 {
     color: #333;
-    font-size: 36px;  /* Increased heading size */
-    margin-bottom: 30px;  /* More space below the heading */
+    font-size: 26px;  /* Increased heading size */
+    margin-bottom: 20px;  /* More space below the heading */
 }
 
 /* Clock and Date Styling */
