@@ -16,6 +16,10 @@ body {
   background-color: #f4f4f4;
 }
 
+.status {
+  color: #00b409;
+}
+
 /* Container for content */
 .container {
   text-align: center;
@@ -82,3 +86,4 @@ button:hover {
 #goToLinkBtn:hover {
   background-color: #c8e9ea; /* Darker green on hover */
 }
+
