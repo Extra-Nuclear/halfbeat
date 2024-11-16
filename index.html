@@ -13,6 +13,7 @@
         <!-- Display Latest and Public Versions -->
         <p><strong>Latest Version:</strong> <span id="latest-version">Loading...</span></p>
         <p><strong>Public Version:</strong> <span id="public-version">Loading...</span></p>
+        <p><strong>Server Status:</strong> <span id="server-status">Loading...</span></p>
         
         <!-- Button to open GitHub editor for version.json -->
         <button onclick="openGitHubEditor()">Edit version.json in GitHub</button>
@@ -37,11 +38,13 @@
                     // Update the page with the fetched version data
                     document.getElementById('latest-version').textContent = data["latest version"];
                     document.getElementById('public-version').textContent = data["public version"];
+                    document.getElementById('server-status').textContent = data["server status"];
                 })
                 .catch(error => {
                     console.error('Error fetching version data:', error);
                     document.getElementById('latest-version').textContent = 'Error loading version';
                     document.getElementById('public-version').textContent = 'Error loading version';
+                    document.getElementById('server-status').textContent = 'Error loading version';
                 });
         }
 
