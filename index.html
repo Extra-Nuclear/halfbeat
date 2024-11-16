@@ -17,8 +17,13 @@
         <!-- Button to open GitHub editor for version.json -->
         <button onclick="openGitHubEditor()">Edit version.json in GitHub</button>
     </div>
-
+    <button id="goToLinkBtn">🅿️</button>
     <script>
+
+        document.getElementById('goToLinkBtn').addEventListener('click', function() {
+        window.location.href = "https://extra-nuclear.github.io/halfbeat/productivity.html"; // Replace with your link
+        });
+
         // Function to open the GitHub editor link
         function openGitHubEditor() {
             window.open("https://github.com/Extra-Nuclear/halfbeat/edit/main/version.json", "_blank");

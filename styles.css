@@ -62,3 +62,23 @@ button:hover {
 .container p, .container h2, .container button {
   margin-bottom: 15px;
 }
+
+
+#goToLinkBtn {
+  position: fixed; /* Fixed position relative to the viewport */
+  bottom: 10px; /* 20px from the bottom */
+  right: 10px; /* 20px from the right */
+  padding: 2px 2px; /* Padding for the button */
+  font-size: 10px; /* Font size */
+  background-color: #ffffff; /* Green background */
+  color: white; /* White text color */
+  border: 2px solid #ddd;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+#goToLinkBtn:hover {
+  background-color: #c8e9ea; /* Darker green on hover */
+}
