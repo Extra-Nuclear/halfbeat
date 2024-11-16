@@ -11,8 +11,8 @@
         <h2>Version Dashboard</h2>
         
         <!-- Display Latest and Public Versions -->
-        <p><strong>Latest Version:</strong> 0.1.2.25</p>
-        <p><strong>Public Version:</strong> 0.1.2.24</p>
+        <p><strong>Latest Version:</strong> <span id="latest-version">Loading...</span></p>
+        <p><strong>Public Version:</strong> <span id="public-version">Loading...</span></p>
         
         <!-- Button to open GitHub editor for version.json -->
         <button onclick="openGitHubEditor()">Edit version.json in GitHub</button>
@@ -23,6 +23,25 @@
         function openGitHubEditor() {
             window.open("https://github.com/Extra-Nuclear/halfbeat/edit/main/version.json", "_blank");
         }
+
+        // Function to fetch version data from the JSON file
+        function fetchVersionData() {
+            fetch('https://raw.githubusercontent.com/Extra-Nuclear/halfbeat/main/version.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Update the page with the fetched version data
+                    document.getElementById('latest-version').textContent = data["latest version"];
+                    document.getElementById('public-version').textContent = data["public version"];
+                })
+                .catch(error => {
+                    console.error('Error fetching version data:', error);
+                    document.getElementById('latest-version').textContent = 'Error loading version';
+                    document.getElementById('public-version').textContent = 'Error loading version';
+                });
+        }
+
+        // Call the fetch function when the page loads
+        window.onload = fetchVersionData;
     </script>
 </body>
 </html>
