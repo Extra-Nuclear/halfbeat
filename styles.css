@@ -1,75 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Version Dashboard</title>
-    <style>
-        /* Style to center everything on the page */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-        
-        /* Container to hold the content */
-        .container {
-            text-align: center;
-            padding: 20px;
-            border: 2px solid #ddd;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        h2 {
-            color: #333;
-        }
+/* Body Styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
 
-        p {
-            font-size: 18px;
-            color: #555;
-        }
+/* Container for content */
+.container {
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #ddd;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+/* Heading Style */
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
 
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
-    <!-- Container for the dashboard content -->
-    <div class="container">
-        <h2>Version Dashboard</h2>
-        
-        <!-- Display Latest and Public Versions -->
-        <p><strong>Latest Version:</strong> 0.1.2.25</p>
-        <p><strong>Public Version:</strong> 0.1.2.24</p>
-        
-        <!-- Button to open GitHub editor for version.json -->
-        <button onclick="openGitHubEditor()">Edit version.json in GitHub</button>
-    </div>
+/* Paragraph Styling */
+p {
+  font-size: 18px;
+  color: #555;
+  margin: 10px 0;
+}
 
-    <script>
-        // Function to open the GitHub editor link
-        function openGitHubEditor() {
-            window.open("https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME/edit/main/version.json", "_blank");
-        }
-    </script>
-</body>
-</html>
+/* Button Styling */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #45a049;
+}
+
+/* Optional: Add some space around the page */
+.container p, .container h2, .container button {
+  margin-bottom: 15px;
+}

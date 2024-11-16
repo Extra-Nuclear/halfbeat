@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Version Dashboard</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
 </head>
 <body>
-    <h2>Version Dashboard</h2>
-    
-    <!-- Display Latest and Public Versions -->
-    <p><strong>Latest Version:</strong> 0.1.2.25</p>
-    <p><strong>Public Version:</strong> 0.1.2.24</p>
-    
-    <!-- Button to open GitHub editor for version.json -->
-    <button onclick="openGitHubEditor()">Edit version.json in GitHub</button>
+    <div class="container">
+        <h2>Version Dashboard</h2>
+        
+        <!-- Display Latest and Public Versions -->
+        <p><strong>Latest Version:</strong> 0.1.2.25</p>
+        <p><strong>Public Version:</strong> 0.1.2.24</p>
+        
+        <!-- Button to open GitHub editor for version.json -->
+        <button onclick="openGitHubEditor()">Edit version.json in GitHub</button>
+    </div>
 
     <script>
         // Function to open the GitHub editor link
