@@ -21,7 +21,7 @@ body {
   text-align: center;
   padding: 20px;
   border: 2px solid #ddd;
-  background-color: #fff;
+  background-color: #d8fffb;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -45,7 +45,7 @@ button {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #4CAF50;
+  background-color: #4c9eaf;
   color: white;
   border: none;
   border-radius: 5px;
@@ -55,7 +55,7 @@ button {
 
 /* Button Hover Effect */
 button:hover {
-  background-color: #45a049;
+  background-color: #3c7d8a;
 }
 
 /* Optional: Add some space around the page */
