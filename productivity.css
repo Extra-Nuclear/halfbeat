@@ -64,7 +64,7 @@ h2, h3 {
 
 /* Clock and Date Styling */
 #clock, #date {
-    font-size: 48px;  /* Increased font size for clock and date */
+    font-size: 38px;  /* Increased font size for clock and date */
     color: #333;
     margin: 20px 0;  /* More space between clock/date */
     font-family: 'Courier New', Courier, monospace;
@@ -72,7 +72,7 @@ h2, h3 {
 
 /* Stopwatch Styling */
 #stopwatch {
-    font-size: 48px;  /* Increased font size for stopwatch */
+    font-size: 38px;  /* Increased font size for stopwatch */
     color: #333;
     margin-bottom: 30px;  /* Space below stopwatch */
     font-family: 'Courier New', Courier, monospace;
