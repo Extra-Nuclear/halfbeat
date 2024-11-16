@@ -7,6 +7,7 @@
 </head>
 <body>
     <h2>Admin Dashboard</h2>
+    
     <label for="latestVersion">Latest Version:</label>
     <input type="text" id="latestVersion" placeholder="Enter latest version">
 
@@ -15,6 +16,16 @@
 
     <button onclick="updateVersion()">Update Version</button>
     <p id="responseMessage"></p>
+    
+    <!-- Button to open GitHub Editor for version.json -->
+    <button onclick="openGitHubEditor()">Edit version.json in GitHub</button>
+
+    <script>
+        // Function to open GitHub editor link
+        function openGitHubEditor() {
+            window.open("https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME/edit/main/version.json", "_blank");
+        }
+    </script>
 
     <script src="dashboard.js"></script>
 </body>
