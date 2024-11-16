@@ -3,16 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clock and Date</title>
-    <link rel="stylesheet" href="productivity.css"> <!-- Link to the CSS file -->
+    <title>Clock, Date, and Stopwatch</title>
+    <link rel="stylesheet" href="productivity.css"> <!-- Link to your custom CSS -->
 </head>
 <body>
+
+    <div class="title_container">
+        <h1>The Productivity Page</h1>
+    </div>
+
     <div class="container">
-        <h2>Super Productivity Mode 😎😎</h2>
-        <p></p>
         <!-- Display Time and Date -->
         <p id="clock">Loading...</p>
         <p id="date">Loading...</p>
+    </div>
+
+
+    <!-- Stopwatch Container -->
+    <div class="stopwatch-container">
+        <!-- <h3>Stopwatch</h3> -->
+        
+        <!-- Stopwatch Time -->
+        <p id="stopwatch">00:00:00.00</p>
+        
+        <!-- Stopwatch Control Buttons -->
+        <div>
+            <button id="startStopBtn">Start</button>
+            <button id="resetBtn">Reset</button>
+        </div>
     </div>
 
     <script>
@@ -45,6 +63,42 @@
             // Continue updating the clock
             requestAnimationFrame(updateTime);
         }
+
+        // Stopwatch functionality
+        let stopwatchInterval;
+        let stopwatchTime = 0;
+        let running = false;
+
+        // Update stopwatch display
+        function updateStopwatch() {
+            stopwatchTime++;
+            const hours = String(Math.floor(stopwatchTime / 3600)).padStart(2, '0');
+            const minutes = String(Math.floor((stopwatchTime % 36000) / 6000)).padStart(2, '0');
+            const seconds = String(Math.floor((stopwatchTime % 6000) / 100)).padStart(2, '0');
+            const milliseconds = String(stopwatchTime % 100).padStart(2, '0');
+            document.getElementById('stopwatch').textContent = `${hours}:${minutes}:${seconds}.${milliseconds}`;
+        }
+
+        // Start/Stop Stopwatch
+        document.getElementById('startStopBtn').addEventListener('click', function() {
+            if (running) {
+                clearInterval(stopwatchInterval);
+                this.textContent = 'Start';
+            } else {
+                stopwatchInterval = setInterval(updateStopwatch, 10);
+                this.textContent = 'Stop';
+            }
+            running = !running;
+        });
+
+        // Reset Stopwatch
+        document.getElementById('resetBtn').addEventListener('click', function() {
+            clearInterval(stopwatchInterval);
+            stopwatchTime = 0;
+            document.getElementById('stopwatch').textContent = '00:00:00.00';
+            document.getElementById('startStopBtn').textContent = 'Start';
+            running = false;
+        });
 
         // Start the clock when the page is loaded
         window.onload = function() {

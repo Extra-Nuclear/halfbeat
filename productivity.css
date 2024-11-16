@@ -8,12 +8,24 @@
 /* Body Styling */
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+}
+
+.title_container {
+    text-align: center;
+    padding: 40px 50px;  /* Increased padding for a bigger container */
+    border: 3px solid #ddd;  /* Thicker border for emphasis */
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px; /* Space between the containers */
+    width: 700px;
 }
 
 /* Container for the clock and date */
@@ -24,10 +36,27 @@ body {
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px; /* Space between the containers */
+    width: 700px; /* Set a fixed width for the containers */
+}
+
+/* Stopwatch Container Styling */
+.stopwatch-container {
+    text-align: center;
+    padding: 40px 50px;  /* Same padding as the top container */
+    border: 3px solid #ddd;  /* Same border style */
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 700px; /* Same fixed width as the top container */
+}
+
+h1 {
+    font-size: 50px;
 }
 
 /* Heading Style */
-h2 {
+h2, h3 {
     color: #333;
     font-size: 36px;  /* Increased heading size */
     margin-bottom: 30px;  /* More space below the heading */
@@ -41,8 +70,32 @@ h2 {
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* Optional: Add a little spacing between the clock and date */
-#date {
-    font-size: 32px;  /* Slightly smaller date size */
-    color: #555;
+/* Stopwatch Styling */
+#stopwatch {
+    font-size: 48px;  /* Increased font size for stopwatch */
+    color: #333;
+    margin-bottom: 30px;  /* Space below stopwatch */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Stopwatch Buttons */
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
 }
