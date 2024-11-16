@@ -17,8 +17,8 @@ function validateLogin() {
     );
 
     if (isAdmin) {
-        // Redirect to admin dashboard (for example purposes, just alerting)
-        alert('Login successful! Redirecting to admin dashboard...');
+        // Redirect to admin dashboard
+        window.location.href = "Admin/version-dashboard.html"; // Set the correct path here
         return true;
     } else {
         // Show error message
