@@ -20,11 +20,18 @@
         function updateTime() {
             const now = new Date();
 
-            // Format time with milliseconds
-            const hours = String(now.getHours()).padStart(2, '0');
+            // Convert to 12-hour format
+            let hours = now.getHours();
             const minutes = String(now.getMinutes()).padStart(2, '0');
             const seconds = String(now.getSeconds()).padStart(2, '0');
             const milliseconds = String(now.getMilliseconds()).padStart(3, '0');
+
+            // Determine AM or PM
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            
+            // Convert hours to 12-hour format
+            hours = hours % 12;
+            hours = hours ? String(hours).padStart(2, '0') : '12'; // The hour '0' should display as '12'
 
             // Format date
             const day = String(now.getDate()).padStart(2, '0');
@@ -32,7 +39,7 @@
             const year = now.getFullYear();
 
             // Display time and date
-            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}.${milliseconds}`;
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}.${milliseconds} ${ampm}`;
             document.getElementById('date').textContent = `${day}/${month}/${year}`;
             
             // Continue updating the clock

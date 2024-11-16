@@ -19,30 +19,30 @@ body {
 /* Container for the clock and date */
 .container {
     text-align: center;
-    padding: 20px;
-    border: 2px solid #ddd;
+    padding: 40px 50px;  /* Increased padding for a bigger container */
+    border: 3px solid #ddd;  /* Thicker border for emphasis */
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Heading Style */
 h2 {
     color: #333;
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 36px;  /* Increased heading size */
+    margin-bottom: 30px;  /* More space below the heading */
 }
 
 /* Clock and Date Styling */
 #clock, #date {
-    font-size: 30px;
+    font-size: 48px;  /* Increased font size for clock and date */
     color: #333;
-    margin: 10px 0;
+    margin: 20px 0;  /* More space between clock/date */
     font-family: 'Courier New', Courier, monospace;
 }
 
 /* Optional: Add a little spacing between the clock and date */
 #date {
-    font-size: 24px;
+    font-size: 32px;  /* Slightly smaller date size */
     color: #555;
 }
