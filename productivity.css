@@ -1,0 +1,48 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Container for the clock and date */
+.container {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Style */
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Clock and Date Styling */
+#clock, #date {
+    font-size: 30px;
+    color: #333;
+    margin: 10px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Optional: Add a little spacing between the clock and date */
+#date {
+    font-size: 24px;
+    color: #555;
+}

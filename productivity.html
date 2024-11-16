@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock and Date</title>
+    <link rel="stylesheet" href="productivity.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h2>Current Time and Date</h2>
+        
+        <!-- Display Time and Date -->
+        <p id="clock">Loading...</p>
+        <p id="date">Loading...</p>
+    </div>
+
+    <script>
+        // Function to update the clock and date
+        function updateTime() {
+            const now = new Date();
+
+            // Format time with milliseconds
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const milliseconds = String(now.getMilliseconds()).padStart(3, '0');
+
+            // Format date
+            const day = String(now.getDate()).padStart(2, '0');
+            const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
+            const year = now.getFullYear();
+
+            // Display time and date
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}.${milliseconds}`;
+            document.getElementById('date').textContent = `${day}/${month}/${year}`;
+        }
+
+        // Update the clock and date every 100ms
+        setInterval(updateTime, 100);
+    </script>
+</body>
+</html>
