@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clock and Date</title>
-    <link rel="stylesheet" href="productivity.css"> <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
 </head>
 <body>
     <div class="container">
@@ -34,10 +34,15 @@
             // Display time and date
             document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}.${milliseconds}`;
             document.getElementById('date').textContent = `${day}/${month}/${year}`;
+            
+            // Continue updating the clock
+            requestAnimationFrame(updateTime);
         }
 
-        // Update the clock and date every 100ms
-        setInterval(updateTime, 100);
+        // Start the clock when the page is loaded
+        window.onload = function() {
+            updateTime();
+        };
     </script>
 </body>
 </html>
